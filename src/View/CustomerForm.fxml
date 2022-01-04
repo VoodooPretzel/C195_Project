@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1">
+    <bottom>
+        <ButtonBar fx:id="buttonBar" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <buttons>
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#handleSave" text="%button.save"/>
+                <Button cancelButton="true" mnemonicParsing="false" onAction="#handleClose" text="%button.cancel"/>
+            </buttons>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+            <padding>
+                <Insets right="10.0"/>
+            </padding>
+        </ButtonBar>
+    </bottom>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <TextField fx:id="idField" layoutX="188.0" layoutY="52.0"/>
+            <TextField fx:id="nameField" layoutX="187.0" layoutY="87.0"/>
+            <TextField fx:id="addressField" layoutX="188.0" layoutY="122.0"/>
+            <TextField fx:id="postalCodeField" layoutX="187.0" layoutY="157.0"/>
+            <TextField fx:id="phoneField" layoutX="187.0" layoutY="192.0"/>
+            <ComboBox fx:id="divisionComboBox" layoutX="187.0" layoutY="227.0" prefWidth="150.0"/>
+            <ComboBox fx:id="countryComboBox" layoutX="187.0" layoutY="262.0" onAction="#populateDivisions"
+                      prefWidth="150.0"/>
+            <Label layoutX="66.0" layoutY="56.0" text="ID"/>
+            <Label layoutX="66.0" layoutY="91.0" text="%customer.name"/>
+            <Label layoutX="66.0" layoutY="126.0" text="%customer.address"/>
+            <Label layoutX="66.0" layoutY="161.0" text="%customer.postalCode"/>
+            <Label layoutX="66.0" layoutY="196.0" text="%customer.phone"/>
+            <Label layoutX="64.0" layoutY="231.0" text="%customer.division"/>
+            <Label layoutX="64.0" layoutY="266.0" text="%customer.country"/>
+        </AnchorPane>
+    </center>
+</BorderPane>

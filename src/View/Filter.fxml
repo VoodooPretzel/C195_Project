@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="360.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1">
+    <bottom>
+        <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <buttons>
+                <Button mnemonicParsing="false" text="%button.clear" onAction="#handleClear"
+                        ButtonBar.buttonData="LEFT"/>
+                <Button mnemonicParsing="false" text="%button.cancel" onAction="#handleClose"/>
+                <Button mnemonicParsing="false" text="%button.save" onAction="#handleSave"/>
+            </buttons>
+            <padding>
+                <Insets right="10.0" left="10.0"/>
+            </padding>
+        </ButtonBar>
+    </bottom>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <ComboBox fx:id="yearComboBox" layoutX="202.0" layoutY="49.0" prefWidth="150.0"/>
+                <RadioButton fx:id="monthButton" layoutX="68.0" layoutY="129.0" mnemonicParsing="false"
+                             text="%form.month"/>
+                <RadioButton fx:id="weekButton" layoutX="233.0" layoutY="129.0" mnemonicParsing="false"
+                             text="%form.week"/>
+                <ComboBox fx:id="comboBox" layoutX="201.0" layoutY="201.0" prefWidth="150.0"/>
+                <Label layoutX="67.0" layoutY="53.0" text="%form.year"/>
+                <Label fx:id="comboBoxLabel" layoutX="79.0" layoutY="205.0" text="FIX ME"/>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Controllers.Login">
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <Label layoutX="132.0" layoutY="171.0" text="%login.username"/>
+            <TextField fx:id="usernameField" layoutX="226.0" layoutY="167.0" onKeyReleased="#handleEnter"/>
+            <Label layoutX="133.0" layoutY="209.0" text="%login.password"/>
+            <PasswordField fx:id="passwordField" layoutX="226.0" layoutY="205.0" onKeyReleased="#handleEnter"/>
+            <Label fx:id="zoneLabel" layoutX="545.0" layoutY="14.0" text="en_US"/>
+            <Label fx:id="zoneLabel1" layoutX="509.0" layoutY="14.0" text="Zone:"/>
+        </AnchorPane>
+    </center>
+    <bottom>
+        <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <buttons>
+                <Button mnemonicParsing="false" onAction="#handleLogin" text="%login.logIn"/>
+            </buttons>
+            <padding>
+                <Insets right="10.0"/>
+            </padding>
+        </ButtonBar>
+    </bottom>
+</BorderPane>
